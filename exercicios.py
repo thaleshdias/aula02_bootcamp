@@ -146,5 +146,5 @@
 
 vlr_entrada01 = float(input("Digite o primeiro número: "))
 vlr_entrada02 = float(input("Digite o segundo número: "))
-vlr_resultado = vlr_entrada01 != vlr_entrada02
+vlr_resultado = vlr_entrada01 == vlr_entrada02
 print(vlr_resultado)
