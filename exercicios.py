@@ -144,7 +144,38 @@
 
 #20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
 
-vlr_entrada01 = float(input("Digite o primeiro número: "))
-vlr_entrada02 = float(input("Digite o segundo número: "))
-vlr_resultado = vlr_entrada01 == vlr_entrada02
-print(vlr_resultado)
+#vlr_entrada01 = float(input("Digite o primeiro número: "))
+#vlr_entrada02 = float(input("Digite o segundo número: "))
+#vlr_resultado = vlr_entrada01 == vlr_entrada02
+#print(vlr_resultado)
+
+#21. Escreva um programa que converta a temperatura de Celsius para Fahrenheit. 
+# O programa deve solicitar ao usuário a temperatura em Celsius e, utilizando try-except, 
+# garantir que a entrada seja numérica, tratando qualquer ValueError. 
+# Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
+
+#try:
+#    vlr_celcius = float(input("Digite a temperatura em Celcius: "))
+#    vlr_fahrenheit = (vlr_celcius * 1.8) + 32
+#    print(f"O valor de {vlr_celcius} ºC em Fahrenheit é equivalente a {vlr_fahrenheit} ºF")
+
+#except ValueError:
+#    print("Valor inválido! Digite apenas números!")
+
+
+#22. Crie um programa que verifica se uma palavra ou frase é um palíndromo (lê-se igualmente de trás para frente, desconsiderando espaços e pontuações). 
+# Utilize try-except para garantir que a entrada seja uma string. Dica: Utilize a função isinstance() para verificar o tipo da entrada.
+
+palavra_entrada = input("Digite uma palavra ou frase: ")
+
+if palavra_entrada.isdigit():
+    print("Entrada inválida! Você digitou apenas números e o esperado era uma string.")       
+elif palavra_entrada.isspace():
+    print("Entrada inválida! Você digitou apenas espaços e o esperado era uma string.")
+elif palavra_entrada.isalpha():
+
+    palavra_formatada = palavra_entrada.replace(" ","").lower()
+    if palavra_formatada == palavra_formatada[:: -1]:            
+        print("É um palindromo!")
+    else:
+        print("Não é um palindromo!")
